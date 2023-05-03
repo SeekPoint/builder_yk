@@ -65,6 +65,7 @@ def compute_cubin_sizes(file_name, section_name='.nv_fatbin', debug=False):
 
 class ArFileCtx:
     def __init__(self, ar_name: str) -> None:
+        print('%s init called', self.__classs__.__name__)
         self.ar_name = os.path.abspath(ar_name)
         self._tmpdir = TemporaryDirectory()
 

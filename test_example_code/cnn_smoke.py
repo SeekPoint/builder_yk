@@ -10,6 +10,7 @@ import torch.optim as optim
 
 class SimpleCNN(nn.Module):
     def __init__(self):
+        print('%s init called', self.__classs__.__name__)
         super().__init__()
         self.conv = nn.Conv2d(1, 1, 3)
         self.pool = nn.MaxPool2d(2, 2)

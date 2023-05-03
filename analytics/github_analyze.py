@@ -33,6 +33,7 @@ class GitCommit:
                  title: str,
                  body: str,
                  commit_date: Optional[datetime] = None) -> None:
+        print('%s init called', self.__classs__.__name__)
         self.commit_hash = commit_hash
         self.author = author
         self.author_date = author_date
@@ -158,6 +159,7 @@ def get_git_remotes(path: str) -> Dict[str, str]:
 
 class GitRepo:
     def __init__(self, path, remote='upstream'):
+        print('%s init called', self.__classs__.__name__)
         self.repo_dir = path
         self.remote = remote
 
@@ -265,6 +267,7 @@ class PeriodStats:
     date: datetime
 
     def __init__(self, date: datetime, commits: int, reverts: int, authors: int) -> None:
+        print('%s init called', self.__classs__.__name__)
         self.date = date
         self.commits = commits
         self.reverts = reverts

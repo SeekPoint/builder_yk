@@ -79,6 +79,7 @@ def str2date(val: str) -> datetime:
 
 class CircleCICache:
     def __init__(self, token: Optional[str], db_name: str = 'circleci-cache.db') -> None:
+        print('%s init called', self.__classs__.__name__)
         file_folder = os.path.dirname(__file__)
         self.url_prefix = 'https://circleci.com/api/v2'
         self.session = requests.session()

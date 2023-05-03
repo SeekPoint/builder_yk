@@ -84,6 +84,7 @@ class RemoteHost:
     ami: Optional[str] = None
 
     def __init__(self, addr: str, keyfile_path: str, login_name: str = 'ubuntu'):
+        print('%s init called', self.__classs__.__name__)
         self.addr = addr
         self.keyfile_path = keyfile_path
         self.login_name = login_name

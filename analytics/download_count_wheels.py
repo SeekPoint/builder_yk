@@ -18,6 +18,7 @@ class CacheEntry:
     _size = None
 
     def __init__(self, download_uri: str):
+        print('%s init called', self.__classs__.__name__)
         self.download_uri = download_uri
         self.bytes_sent = 0
 

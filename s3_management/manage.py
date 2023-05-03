@@ -98,6 +98,7 @@ def between_bad_dates(package_build_time: datetime):
 
 class S3Index:
     def __init__(self: S3IndexType, objects: List[str], prefix: str) -> None:
+        print('%s init called', self.__classs__.__name__)
         self.objects = objects
         self.prefix = prefix.rstrip("/")
         self.html_name = PREFIXES_WITH_HTML[self.prefix]
